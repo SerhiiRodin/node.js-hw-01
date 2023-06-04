@@ -41,9 +41,9 @@ const addContact = async (name, email, phone) => {
 
   const newContact = { id: nanoid(), name, email, phone };
 
-  const validationByName = contacts.find((contact) => contact.name === name);
+  const index = contacts.findIndex((contact) => contact.name === name);
 
-  if (validationByName) {
+  if (index !== -1) {
     return null;
   }
   contacts.push(newContact);
