@@ -4,8 +4,8 @@
 
 [Remove](https://ibb.co/C8rc7Fm)
 
-[imgbb.com Add](https://ibb.co/s16CR75)
+[Add](https://ibb.co/s16CR75)
 
-[imgbb.com Get](https://ibb.co/D5cQZLT)
+[Get](https://ibb.co/D5cQZLT)
 
-[imgbb.com List](https://ibb.co/jGGxGzH)
+[List](https://ibb.co/jGGxGzH)
