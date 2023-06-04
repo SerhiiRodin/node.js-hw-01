@@ -11,7 +11,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
     case "list":
       const contacts = await listContacts();
 
-      console.log(contacts);
+      console.table(contacts);
       console.log("Request completed successfully".green);
       return;
 
@@ -23,7 +23,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
         return;
       }
 
-      console.log(contactById);
+      console.table(contactById);
       console.log(`Contact with id: "${id}" found`.green);
       return;
 
@@ -35,19 +35,24 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
         return;
       }
 
-      console.log(newContact);
+      console.table(newContact);
       console.log("Contact added successfully".green);
       return;
 
     case "remove":
-      // ... id
       const removeContactById = await removeContact(id);
-      console.log(removeContactById);
+
+      if (removeContactById === null) {
+        console.log(`Contact with id: "${id}" not found.`.red);
+        return;
+      }
+
+      console.table(removeContactById);
       console.log("Contact remove successfully".green);
-      break;
+      return;
 
     default:
-      console.warn("\x1B[31m Unknown action type!");
+      console.warn(" Unknown action type!".red);
   }
 };
 
