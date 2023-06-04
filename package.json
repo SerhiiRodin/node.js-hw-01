@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "colors": "^1.4.0",
+    "nanoid": "^3.3.4",
     "yargs": "^17.7.2"
   }
 }
